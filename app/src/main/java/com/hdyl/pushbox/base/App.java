@@ -2,9 +2,9 @@ package com.hdyl.pushbox.base;
 
 import android.app.Application;
 
-public class MyApplication extends Application {
+public class App extends Application {
 
-	public static MyApplication instance;
+	public static App instance;
 //	private RequestQueue requestQueue;
 //	public DisplayImageOptions options;
 
@@ -13,7 +13,7 @@ public class MyApplication extends Application {
 		super.onCreate();
 		instance = this;
 //		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this).build();
-//		ImageLoader.getInstance().init(config);
+//		ImageLoader.getContext().init(config);
 //		options = new DisplayImageOptions.Builder().showStubImage(R.drawable.ic_launcher) // 设置图片下载期间显示的图片
 //				.showImageForEmptyUri(R.drawable.ic_launcher) // 设置图片Uri为空或是错误的时候显示的图片
 //				.showImageOnFail(R.drawable.ic_launcher) // 设置图片加载或解码过程中发生错误显示的图片
@@ -30,7 +30,7 @@ public class MyApplication extends Application {
 //		return requestQueue;
 //	}
 
-	public static MyApplication getInstance() {
+	public static App getContext() {
 		return instance;
 	}
 //

@@ -1,25 +1,10 @@
 package com.hdyl.pushbox.file;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import u.aly.da;
-
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.ClipboardManager;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.os.Build;
-import android.os.Environment;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -35,10 +20,10 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.hdyl.pushbox.R;
 import com.hdyl.pushbox.base.BaseActivity;
-import com.hdyl.pushbox.base.ConstData;
 import com.hdyl.pushbox.base.DialogCreator;
 import com.hdyl.pushbox.base.adapter.BaseViewHolder;
 import com.hdyl.pushbox.base.adapter.SuperAdapter;
+import com.hdyl.pushbox.paraser.impl.ParaserCaches;
 import com.hdyl.pushbox.soko.SokoLevelListActivity;
 import com.hdyl.pushbox.soko.tool.ParaseLevelTools;
 import com.hdyl.pushbox.tools.LogUtils;
@@ -46,6 +31,12 @@ import com.hdyl.pushbox.tools.MySharepreferences;
 import com.hdyl.pushbox.tools.ShareCacheUtil;
 import com.hdyl.pushbox.tools.ToastUtils;
 import com.hdyl.pushbox.tools.Tools;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyFileListActivity extends BaseActivity implements OnItemClickListener, OnItemLongClickListener {
 
@@ -60,7 +51,7 @@ public class MyFileListActivity extends BaseActivity implements OnItemClickListe
 
 		switch (arg0.getId()) {
 		case R.id.tv_sd_level:
-			ChooseFileFragment.lunch(mContext, "选择扩展关卡集", true, ParaseLevelTools.exts, REQUEST_CODE);
+			ChooseFileFragment.lunch(mContext, "选择扩展关卡集", true, ParaserCaches.sSupportString, REQUEST_CODE);
 			break;
 		case R.id.back:
 			finish();
@@ -164,7 +155,7 @@ public class MyFileListActivity extends BaseActivity implements OnItemClickListe
 			}
 		};
 
-		txtFormatString = "支持文件格式：" + ParaseLevelTools.getSupportExtString(ParaseLevelTools.exts);
+		txtFormatString = "支持文件格式：" + ParaseLevelTools.getSupportExtString(ParaserCaches.sSupportString);
 
 		tvRightMenu.setText("SD卡导入");
 		textView.setText("请选择关卡集");

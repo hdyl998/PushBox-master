@@ -1,4 +1,4 @@
-package com.hdyl.pushbox.paraser;
+package com.hdyl.pushbox.paraser.impl;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -6,10 +6,12 @@ import java.io.InputStreamReader;
 import java.util.List;
 
 import com.hdyl.pushbox.base.Consts;
+import com.hdyl.pushbox.paraser.IParser;
+import com.hdyl.pushbox.paraser.SupportExt;
 import com.hdyl.pushbox.soko.LevelChooseItem;
 import com.hdyl.pushbox.soko.LevelChooseItem.MyLevel;
-import com.hdyl.pushbox.tools.LogUtils;
 
+@SupportExt("box")
 public class BoxParser implements IParser, Consts {
 
 	@Override
@@ -109,6 +111,5 @@ public class BoxParser implements IParser, Consts {
 	// 6 = man (@)
 	// 7 = man on goal (+)
 
-	public final static String SUPPORT_EXT = "box";
 
 }

@@ -6,15 +6,13 @@ import java.util.List;
 import java.util.Stack;
 import java.util.Timer;
 
-import u.aly.r;
-
 import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.text.TextUtils;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -26,7 +24,6 @@ import android.widget.TextView;
 
 import com.hdyl.pushbox.R;
 import com.hdyl.pushbox.base.BaseActivity;
-import com.hdyl.pushbox.base.ConstData;
 import com.hdyl.pushbox.base.DialogCreator;
 import com.hdyl.pushbox.setting.SettingConfig;
 import com.hdyl.pushbox.soko.LevelChooseItem.LevelInfo;
@@ -203,7 +200,7 @@ public class SokoGameActivity extends BaseActivity {
 			this.data = data;
 		}
 
-		int sleepTime = SettingConfig.getInstence().sleepTime;
+		int sleepTime = SettingConfig.getConfig().sleepTime;
 
 		@Override
 		public void run() {

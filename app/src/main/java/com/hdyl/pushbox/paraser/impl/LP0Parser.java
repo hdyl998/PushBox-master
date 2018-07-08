@@ -1,17 +1,17 @@
-package com.hdyl.pushbox.paraser;
+package com.hdyl.pushbox.paraser.impl;
 
 import java.io.InputStream;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
 import com.hdyl.pushbox.base.Consts;
-import com.hdyl.pushbox.base.MyApplication;
+import com.hdyl.pushbox.paraser.IParser;
+import com.hdyl.pushbox.paraser.SupportExt;
 import com.hdyl.pushbox.soko.LevelChooseItem;
 import com.hdyl.pushbox.soko.LevelChooseItem.MyLevel;
-import com.hdyl.pushbox.tools.ToastUtils;
 
+@SupportExt("lp0")
 public class LP0Parser implements IParser, Consts {
 	public class MyData {
 		int endIndex = 0;
@@ -148,7 +148,6 @@ public class LP0Parser implements IParser, Consts {
 		return buffer.substring(0);
 	}
 
-	public final static  String SUPPORT_EXT="lp0";
 
 	// private int getNextNumIndex(byte[] bytes, int start, int lianNum, int
 	// varlue) {

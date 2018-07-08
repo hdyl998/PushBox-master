@@ -11,7 +11,7 @@ import com.hdyl.pushbox.setting.SettingConfig;
 public class FillCornerManager implements Consts {
 	// 覆盖边角
 	public void fillCorner(Canvas canvas, int arr[][], int size, int xOffSet, int yOffSet) {
-		SettingConfig config = SettingConfig.getInstence();
+		SettingConfig config = SettingConfig.getConfig();
 
 		Bitmap bitmapCorner = ConstData.getBitmaps()[ID_WALL];
 

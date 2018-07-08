@@ -209,7 +209,7 @@ public class SokoGameView extends View implements Consts {
 		paint.setTextSize(Tools.dip2px(context, 14));
 		paint.setColor(Color.parseColor("#dd4a4a"));
 		fontHeight = getFontHeight();
-		isShowPosition = SettingConfig.getInstence().isPosition;
+		isShowPosition = SettingConfig.getConfig().isPosition;
 	}
 
 	int fontHeight;

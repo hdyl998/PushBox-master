@@ -1,20 +1,18 @@
-package com.hdyl.pushbox.paraser;
+package com.hdyl.pushbox.paraser.impl;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
 
-import android.util.Log;
-
-import com.alibaba.fastjson.JSON;
+import com.hdyl.pushbox.paraser.IParser;
+import com.hdyl.pushbox.paraser.SupportExt;
 import com.hdyl.pushbox.soko.LevelChooseItem;
 import com.hdyl.pushbox.soko.LevelChooseItem.LevelInfo;
 import com.hdyl.pushbox.soko.LevelChooseItem.MyLevel;
 import com.hdyl.pushbox.soko.tool.SaveDataUtls;
 import com.hdyl.pushbox.tools.LogUtils;
 
+@SupportExt("sok")
 public class SokParser implements IParser {
 
 	@Override
@@ -159,6 +157,5 @@ public class SokParser implements IParser {
 	public final static int READ_LEVEL_COMMENT = 7;
 	public final static int READ_LEVEL_SOLUTION = 8;
 
-	public final static String SUPPORT_EXT = "sok";
 
 }

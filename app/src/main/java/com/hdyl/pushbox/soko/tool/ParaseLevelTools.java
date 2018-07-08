@@ -20,7 +20,6 @@ public class ParaseLevelTools {
 		return JSON.toJSONString(object);
 	}
 
-	public final static String exts = "slc,xsb,lp0,sok,box,txt";
 
 	public static boolean isFileExtRight(String fileName, String[] arrExts) {
 		String sssString = fileName.toLowerCase();
@@ -44,7 +43,8 @@ public class ParaseLevelTools {
 			} else {
 				sb.append("|");
 			}
-			sb.append("*" + ss);
+			sb.append("*.");
+			sb.append(ss);
 		}
 		return sb.substring(0);
 	}

@@ -1,6 +1,6 @@
 package com.hdyl.pushbox.tools;
 
-import com.hdyl.pushbox.base.MyApplication;
+import com.hdyl.pushbox.base.App;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -19,10 +19,10 @@ public class ToastUtils {
 	}
 
 	public static void makeTextAndShow(Context context, String content) {
-		makeTextAndShow(MyApplication.getInstance(), content, 0);
+		makeTextAndShow(App.getContext(), content, 0);
 	}
 
 	public static void makeTextAndShow(String content) {
-		makeTextAndShow(MyApplication.getInstance(), content, 0);
+		makeTextAndShow(App.getContext(), content, 0);
 	}
 }

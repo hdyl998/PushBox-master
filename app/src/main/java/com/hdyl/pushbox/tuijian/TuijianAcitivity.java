@@ -53,10 +53,10 @@ public class TuijianAcitivity extends BaseActivity implements OnClickListener {
 		listView.addFooterView(textView);
 
 		AppItem appItem = new AppItem();
-		appItem.name = "经典扫雷";
-		appItem.icon = R.drawable.app1;
-		appItem.url = "3281879";
-		listMatchItems.add(appItem);
+//		appItem.name = "经典扫雷";
+//		appItem.icon = R.drawable.app1;
+//		appItem.url = "3281879";
+//		listMatchItems.add(appItem);
 
 		appItem = new AppItem();
 		appItem.name = "连连看";
@@ -70,17 +70,17 @@ public class TuijianAcitivity extends BaseActivity implements OnClickListener {
 		appItem.url = "3387918";
 		listMatchItems.add(appItem);
 
-		appItem = new AppItem();
-		appItem.name = "趣味连萌";
-		appItem.icon = R.drawable.app6;
-		appItem.url = "3502028";
-		listMatchItems.add(appItem);
+//		appItem = new AppItem();
+//		appItem.name = "趣味连萌";
+//		appItem.icon = R.drawable.app6;
+//		appItem.url = "3502028";
+//		listMatchItems.add(appItem);
 
-		appItem = new AppItem();
-		appItem.name = "15拼图";
-		appItem.icon = R.drawable.app4;
-		appItem.url = "3118746";
-		listMatchItems.add(appItem);
+//		appItem = new AppItem();
+//		appItem.name = "15拼图";
+//		appItem.icon = R.drawable.app4;
+//		appItem.url = "3118746";
+//		listMatchItems.add(appItem);
 
 		appItem = new AppItem();
 		appItem.name = "坚持一下";

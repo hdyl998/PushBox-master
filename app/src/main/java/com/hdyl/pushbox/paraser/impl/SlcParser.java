@@ -1,4 +1,4 @@
-package com.hdyl.pushbox.paraser;
+package com.hdyl.pushbox.paraser.impl;
 
 import java.io.InputStream;
 
@@ -6,9 +6,12 @@ import org.xmlpull.v1.XmlPullParser;
 
 import android.util.Xml;
 
+import com.hdyl.pushbox.paraser.IParser;
+import com.hdyl.pushbox.paraser.SupportExt;
 import com.hdyl.pushbox.soko.LevelChooseItem;
 import com.hdyl.pushbox.soko.LevelChooseItem.MyLevel;
 
+@SupportExt("slc")
 public class SlcParser implements IParser {
 
 	@Override
@@ -57,7 +60,5 @@ public class SlcParser implements IParser {
 		}
 		return books;
 	}
-
-	public final static  String SUPPORT_EXT="slc";
 
 }

@@ -1,7 +1,5 @@
 package com.hdyl.pushbox.setting;
 
-import u.aly.co;
-
 import com.hdyl.pushbox.R;
 
 import android.app.Dialog;
@@ -15,7 +13,7 @@ public class ColorPickDialog extends Dialog {
 	SeekBar seekBarRed;
 	SeekBar seekBarBlue;
 	SeekBar seekBarGreen;
-	SettingConfig config = SettingConfig.getInstence();
+	SettingConfig config = SettingConfig.getConfig();
 	View viewExample;
 
 	TextView tvRed, tvBlue, tvGreen;
