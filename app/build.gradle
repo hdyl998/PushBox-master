@@ -3,11 +3,22 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.2"
+
+    signingConfigs {
+        pushbox {
+            keyAlias 'pushboxguangdong'
+            keyPassword '321lgd'
+            storeFile file('./pushbox.key')
+            storePassword '321lgd'
+        }
+    }
+
     defaultConfig {
-        applicationId "com.hdyl.pushbox"
+        applicationId "com.mei.pushbox"//com.hdyl.pushbox
         minSdkVersion 14
         targetSdkVersion 22
-        versionCode 300
+        signingConfig signingConfigs.pushbox
+        versionCode 310
         versionName "3.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
