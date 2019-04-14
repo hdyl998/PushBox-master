@@ -47,7 +47,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
         android:gravity="center"
-        android:text="寒冬已至 出品\n986850427@qq.com\nCopy Right 2016-2018"
+        android:text="寒冬已至 出品\n986850427@qq.com\nCopy Right 2016-2019"
         android:textColor="@color/orange" />
 
     <TextView

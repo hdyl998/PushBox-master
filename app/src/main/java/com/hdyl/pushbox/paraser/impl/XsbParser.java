@@ -9,7 +9,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-@SupportExt("xsb")
+@SupportExt({"xsb","txt"})
 public class XsbParser implements IParser {
 
     @Override

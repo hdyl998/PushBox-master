@@ -15,30 +15,43 @@ import java.util.List;
 
 public class ParaserCaches {
 
-    public final static HashMap<String, IParser> sParsers = new HashMap<>();//默认的解析器
-    public final static List<String> sSupportList = new ArrayList<>();//支持的格式
-    public final static String sSupportString = Tools.list2String(sSupportList);
+    public final static HashMap<String, IParser> sParsers;//默认的解析器
+    public final static List<String> sSupportList;//支持的格式
+    public final static String sSupportString;
+
+//    final static ParaserCaches caches = new ParaserCaches();
+//
+//    public static ParaserCaches getInstance() {
+//        return caches;
+//    }
+
+    private static final String TAG = "ParaserCaches";
 
     static {
-        List<String> list = Tools.getClassNames(ParaserCaches.class.getPackage().getName());
-        LogUtils.Print("tt",list);
-        for (String ss : list) {
+        sParsers = new HashMap<>();//默认的解析器
+        sSupportList = new ArrayList<>();//支持的格式
+
+        Class[]clazzs=new Class[]{BoxParser.class,LP0Parser.class,SlcParser.class,SokParser.class,XsbParser.class};
+
+        LogUtils.Print(TAG, clazzs);
+        for (Class class1 : clazzs) {
             try {
-                Class<?> class1 = Class.forName(ss);
-                SupportExt ext = class1.getAnnotation(SupportExt.class);
+                SupportExt ext = (SupportExt) class1.getAnnotation(SupportExt.class);
 
-                LogUtils.Print("tt",ext);
+                LogUtils.Print(TAG, ext);
                 if (ext != null) {
-                    String extString = ext.value();
-                    sParsers.put(extString, (IParser) class1.newInstance());
-                    sSupportList.add(extString);
-
-
-                    LogUtils.Print("tt",extString);
+                    String extStrings[] = ext.value();
+                    IParser iParser = (IParser) class1.newInstance();
+                    for (String key : extStrings) {
+                        sParsers.put(key, iParser);
+                        sSupportList.add(key);
+                    }
+                    LogUtils.Print(TAG, extStrings);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
+        sSupportString = Tools.list2String(sSupportList);
     }
 }

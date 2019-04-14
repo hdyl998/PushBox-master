@@ -15,8 +15,8 @@ public class ParserManager implements IParser {
         int index = name.lastIndexOf(".");
         if (index != -1) {
             String ext=name.substring(index + 1);
-            LogUtils.Print("ttt","ext "+ext);
             paraser = ParaserCaches.sParsers.get(ext);
+            LogUtils.Print("ttt","ext "+paraser);
         }
 
 
