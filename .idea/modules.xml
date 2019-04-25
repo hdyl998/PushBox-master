@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://D:\mygit\PushBox-master\PushBox.iml" filepath="D:\mygit\PushBox-master\PushBox.iml" />
+      <module fileurl="file://D:/mygit/PushBox-master/PushBox.iml" filepath="D:/mygit/PushBox-master/PushBox.iml" />
+      <module fileurl="file://D:/GitProjects/PushBox-master/PushBox-master.iml" filepath="D:/GitProjects/PushBox-master/PushBox-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PushBox-master.iml" filepath="$PROJECT_DIR$/.idea/PushBox-master.iml" />
-      <module fileurl="file://D:\GitProjects\PushBox-master\PushBox-master.iml" filepath="D:\GitProjects\PushBox-master\PushBox-master.iml" />
+      <module fileurl="file://D:/GitProjects/PushBox-master/PushBox-master.iml" filepath="D:/GitProjects/PushBox-master/PushBox-master.iml" />
+      <module fileurl="file://D:/GitProjects/PushBox-master/app/app.iml" filepath="D:/GitProjects/PushBox-master/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\GitProjects\PushBox-master\app\app.iml" filepath="D:\GitProjects\PushBox-master\app\app.iml" />
     </modules>
   </component>
 </project>
